@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<input type="text" name="toevoegen" id="toevoegen">
+<button onclick="samenvoegen()">Voeg fruit toe</button>
+<p id="plus"></p>
+
+<body>
+    <script>
+        var roodFruit= ["aardbei","framboos"];
+        var anderFruit= ["appel","banaan","kiwi"];
+        var fruit=(roodFruit.concat(anderFruit));
+        var toevoegen= document.querySelector("#toevoegen");
+        document.querySelector("#plus").innerHTML=fruit;
+
+        function samenvoegen(){
+            fruit.splice((fruit.length),0,toevoegen.value);
+            document.querySelector("#plus").innerHTML=fruit;
+        }
+    </script>
+</body>
+</html>

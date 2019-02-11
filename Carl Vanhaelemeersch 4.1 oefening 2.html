@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="fruit" id="fruit"> 
+    <button onclick="toevoegen()">Fruit toevoegen</button>
+    <p id="plak"></p>
+    <hr>
+
+    <input type="text" name="waar" id="waar">
+    <button onclick="locatie()">Fruit vinden</button>
+    <p id="positie">...</p>
+
+    <script>
+        var fruiten=["appel","banaan"];
+        var fruit=document.querySelector("#fruit");
+        var waar=document.querySelector("#waar");
+        document.querySelector("#plak").innerHTML=fruiten;
+        
+
+        function toevoegen(){
+            fruiten.push(fruit.value);
+            document.querySelector("#plak").innerHTML=fruiten;
+        }
+
+        function locatie(){
+            
+            var a=fruiten.indexOf(waar.value);
+            document.querySelector("#positie").innerHTML=a;
+        }
+
+    </script>
+</body>
+</html>
